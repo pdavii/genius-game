@@ -73,11 +73,14 @@ let createColorElement = (color) => {
     }
 }
 
+let myScoreUser = document.querySelector('.score__body')
 //funcao para proximo nivel do jogo
 let nextLevel = () => {
+    myScoreUser.innerHTML = score * 10;
     score++;
-    shuffleOrder();
+    shuffleOrder();   
 }
+
 
 //funcao para game over
 let gameOver = () => {
